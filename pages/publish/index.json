@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "发布",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-select": "../../dist/select/index",
+    "wux-input": "../../dist/input/index",
+    "wux-upload": "../../dist/upload/index",
+    "wux-icon": "../../dist/wx_icon/index",
+    "wux-switch": "../../dist/switch/index",
+    "wux-button": "../../dist/button/index",
+    "van-field": "../../dist/field/index",
+    "wux-textarea": "../../dist/textarea/index"
+     
+  }
+}

@@ -1,0 +1,40 @@
+<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+        
+        
+        <!-- 图文信息 -->
+        <view class="photo_info_box">
+            
+            <!-- 图文评论列表 -->
+            <view class="photo_comment_box">
+                <view class="commment_list" wx:for="{{comment}}" wx:key="this">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{item.userface}}"></image>
+                            <text>{{item.nickname}}</text>
+                        </view>
+                        <text class="c_date_txt">{{item.date}}</text>
+                    </view>
+                    <view class="comment_content">{{item.content}}</view>
+                </view>
+
+            </view>
+
+        </view>
+			<form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="footer_comment_box">
+
+          <view class="footer_comment_input">
+            <input name="content" class="" placeholder="写下您的评论..." value="{{val}}"/>
+          </view>	
+          <button class="send_btn" formType="submit">发送</button>          
+        </view>
+    </form>
+    </view>
+    
+
+	
+    <!-- <template is="fixed-bar" data="{{page:'index'}}" /> -->
+</view>

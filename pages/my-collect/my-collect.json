@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "美文",
+  "usingComponents": {
+    "van-tag": "../../dist/tag/index",
+    "van-icon": "../../dist/icon/index",
+    "i-load-more": "../../dist/load-more/index",
+    "wux-tabs": "../../dist/tabs/index",
+    "wux-tab": "../../dist/tab/index",
+    "wux-badge": "../../dist/badge/index",
+    "van-col": "../../dist/col/index",
+    "van-row": "../../dist/row/index"
+  }
+}

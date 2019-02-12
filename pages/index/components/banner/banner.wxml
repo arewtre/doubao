@@ -1,0 +1,33 @@
+<!-- banner轮播-->
+<view class="index-banner">
+<!-- 顶部置灰 -->
+  <view class="linear"></view> 
+  <swiper autoplay="{{autoplay}}" class="banner-box swiper-box dot-{{item.style.btnShape}}" duration="{{duration}}" circular="{{true}}" indicator-dots="{{indicatorDots}}" interval="{{interval}}" indicator-color="{{item.style.btnColor}}" indicator-active-color="#fd4a5f" bindchange="bindChange" data-item-key="{{item_key}}">
+    <navigator hover-class="none" url="../../{{item.url}}" wx:for="{{banner}}" wx:key="this">
+      <swiper-item item-id="{{index}}">
+        <image class="slide-image" src="{{item.pic_url}}" data-id="{{index}}" mode="aspectFill" ></image>
+      </swiper-item>
+    </navigator>
+  </swiper>
+
+  <!-- 顶部置灰 -->
+  <view class="linear"></view> 
+</view>
+
+
+
+<!--carousel/index.wxml-->
+
+<!-- <swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+
+  <block wx:for="{{banner}}" wx:key='this'>
+
+    <swiper-item class="item">
+
+      <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="{{item.pic_url}}"></image>
+
+    </swiper-item>
+
+  </block>
+
+</swiper> -->

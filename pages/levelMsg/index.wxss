@@ -1,0 +1,409 @@
+@import "../../utils/iconfont.wxss";
+page {
+  background: #fff;
+
+}
+
+image {
+  display: block;
+  width: 100%;
+}
+
+.Rose-content {
+  overflow: hidden;
+}
+
+.Rose-detail {
+  background: #fff;
+  font-size: 32rpx;
+  line-height: 1.8;
+  padding: 20rpx;
+  color: #666;
+}
+
+.Rose-title {
+  color: #000;
+  font-size: 48rpx;
+  line-height: 1.4;
+}
+
+.Rose-addtime {
+  margin: 20rpx 0;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.Rose-imgitem {
+  height: 330rpx;
+  display: block;
+  width: 100%;
+}
+
+.wxParse-pre {
+  padding: 10rpx;
+  margin: 20rpx 0;
+  white-space: pre;
+  overflow: auto;
+  background: #000;
+  color: #999;
+}
+
+.Rose-keywords {
+  margin-left: 20rpx;
+}
+
+.Rose-small {
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.wxParse-p {
+  word-break: break-word;
+  padding: 10rpx 0;
+}
+
+.Rose-lines, .wxParse-h3 {
+  font-size: 36rpx;
+  position: relative;
+  padding: 10rpx 20rpx;
+  color: #333;
+}
+
+.Rose-lines:before, .wxParse-h3:before {
+  position: absolute;
+  top: 16rpx;
+  left: 0;
+  width: 8rpx;
+  height: 36rpx;
+  content: '';
+  background: #fd4a5f;
+}
+
+.wxParse-h3 {
+  margin: 40rpx 0 0;
+  font-weight: 400;
+}
+
+.wxParse-h3:before {
+  top: 24rpx;
+}
+
+.wxParse-li {
+  position: relative;
+  padding-left: 40rpx;
+}
+
+.wxParse-li:before {
+  position: absolute;
+  left: 10rpx;
+  top: 20rpx;
+  width: 10rpx;
+  height: 10rpx;
+  background: #999;
+  content: '';
+  border-radius: 100%;
+}
+
+.wxParse-div {
+  word-break: break-all;
+}
+
+.wxParse-h5 {
+  padding: 5rpx 0;
+  font-weight: 600;
+}
+
+.icon-xiangqufill {
+  color: #ff80c2;
+}
+
+/*top10推荐*/
+
+.Rose-top {
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.Rose-topli {
+  position: relative;
+  padding: 20rpx 20rpx 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.Rose-topli:before {
+  position: absolute;
+  left: 20rpx;
+  top: 34rpx;
+  width: 10rpx;
+  height: 10rpx;
+  background: #fd4a5f;
+  content: '';
+  border-radius: 100%;
+}
+
+.Rose-read {
+  margin: 40rpx 0 0;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.Rose-Right {
+  float: right;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.Rose-Right .iconfont {
+  margin-top: -8rpx;
+  vertical-align: middle;
+  font-size: 34rpx;
+}
+
+/*改版评论*/
+
+.icon-like-fill {
+  color: #fd4a5f;
+}
+
+.Rose-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+  background: #fff;
+  z-index: 5;
+}
+
+.Rose-flex {
+  padding: 14rpx 20rpx;
+  display: flex;
+}
+
+.Rose-none .iconfont {
+  font-size: 52rpx;
+  padding: 15rpx 10rpx 0 0;
+  color: #fd4a5f;
+}
+
+.Rose-input {
+  flex: 1;
+  height: 76rpx;
+  line-height: 76rpx;
+  padding: 0 20rpx;
+  background: #f5f5f5;
+  border: 2rpx solid #d9d9d9;
+  font-size: 30rpx;
+  border-radius: 4rpx;
+}
+
+button[disabled]:not([type]) {
+  background: #d9d9d9;
+  color: #999;
+  border-radius: 4rpx;
+}
+
+button::after {
+  border: 1px solid #d9d9d9;
+  border-radius: 4rpx;
+}
+
+.Rose-post {
+  flex: none;
+  height: 80rpx;
+  background: #fd4a5f;
+  margin: 0 0 0 10rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 4rpx;
+  padding: 0 20rpx;
+  text-align: center;
+  box-shadow: none;
+  border-radius:8rpx;
+}
+button[disabled] {
+  border-radius:8rpx;
+}
+.Rose-copyRight {
+  padding:40rpx;
+  text-align:center;
+  font-size:20rpx;
+  color:#ccc;
+  line-height:1.4;
+
+}
+.kapo-name {
+  font-size:24rpx;
+  color:#a8a8a8;
+
+}
+
+/*最新*/
+
+.Rose-comments {
+  padding: 20rpx 0 0;
+  background: #fff;
+}
+
+.Rose-lists {
+  padding: 20rpx;
+}
+
+.Rose-resource {
+  display: flex;
+}
+
+.Rose-image {
+  flex: none;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 4rpx;
+}
+
+.Rose-image .iconfont {
+  font-size: 60rpx;
+  color: #999;
+}
+
+.Rose-user {
+  flex: 1;
+  padding: 0 0 20rpx;
+  font-size: 24rpx;
+  color: #a8a8a8;
+  line-height: 1;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.Rose-items {
+  padding: 30rpx 0 0;
+}
+
+.Rose-items:last-child .Rose-user {
+  border-bottom: none;
+}
+
+.Rose-form {
+  margin: 0 0 0 20rpx;
+}
+
+.Rose-names {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.Rose-times {
+  padding: 16rpx 0;
+  color: #999;
+  font-size: 20rpx;
+}
+
+.Rose-edit {
+  width: 20%;
+  float: left;
+}
+
+.Rose-edit icon {
+  font-size: 36rpx;
+  margin: 0 10rpx;
+  color: #999;
+}
+
+.Rose-comment-content {
+  color: #666;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+
+.Rose-back {
+  margin: 20rpx 0 0 20rpx;
+  color: #999;
+  font-size: 28rpx;
+  padding: 10rpx;
+  line-height: 1.6;
+  background: #f5f5f5;
+}
+
+.Rose-back-item {
+  line-height: 1.4;
+  word-break: break-all;
+  padding: 5rpx 0;
+}
+
+.Rose-tt {
+  color: #333;
+}
+
+.Rose-feeds {
+  padding: 10px;
+  border-bottom: 2rpx solid #f2f2f2;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.Rose-empty {
+  padding: 60rpx 0 80rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.Rose-end {
+  margin: -20rpx 0 0;
+  padding: 30rpx 0;
+  text-align: center;
+  line-height: 1;
+  border-top: 1rpx solid #f2f2f2;
+}
+
+.Rose-word {
+  line-height: 1;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.iconfont.icon-kafei {
+  display: block;
+  font-size: 90rpx;
+  color: #eee;
+  margin-bottom: 10rpx;
+}
+
+.modal-content {
+  padding: 59rpx 0;
+}
+
+.Rose-link {
+  margin: 20rpx 0 0;
+  padding: 5rpx;
+  background: #f5f5f5;
+  color: #999;
+}
+
+.Rose-End {
+  margin: 80rpx 0 0;
+  text-align: center;
+  color: #999;
+}
+.wxParse video{
+  margin-top:10rpx;
+  z-index:0;
+  position: relative;
+}
+.wxParse image,video{
+ width:100%;
+}
+
+.Rose-userface{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50% 50%;
+  float:left;
+  margin-right:10rpx;
+}
+.Rose-date{
+  margin-left:15rpx
+}

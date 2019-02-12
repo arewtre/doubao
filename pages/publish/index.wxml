@@ -1,0 +1,59 @@
+
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">发布</view>
+        <view class="page__desc">Publish</view>
+    </view>
+    <form bindsubmit="submit">
+    <view class="page__bd">
+        <wux-cell-group title="">
+            <wux-cell hover-class="none">
+                <wux-input label="标题" placeholder="请输入标题" defaultValue="{{title}}" bind:change="onChange1" />
+            </wux-cell>                         
+            <wux-cell hover-class="none">
+                <wux-input label="关键字" defaultValue="{{keywords}}" placeholder="请输入关键字','隔开" bind:change="onChange2"   />
+            </wux-cell>
+            <!-- <wux-cell hover-class="none">
+                <wux-input label="板块" disabled placeholder="请输入选择板块" extra="{{ cate }}" bind:click="onClick2"  />
+            </wux-cell>  -->
+            <wux-cell hover-class="none" title="板块" extra="{{ cate }}" bind:click="onClick2" ></wux-cell>
+            <wux-cell hover-class="none">
+                <wux-textarea hasCount rows="3" defaultValue="{{textarea}}" label="内容" placeholder="请输入..." bind:change="onChange3" />
+            </wux-cell>
+        </wux-cell-group>
+    </view>
+    <view class="optClass">
+        <view class='optName'>附件</view> 
+        <view class='optContent' >可上传图片或视频</view>
+    </view>
+    <view class="optClass" style='padding:0 30rpx;flex-wrap:wrap;'>
+        <view class='uploadimgbox' wx:for="{{upImgArr}}" wx:key="item">
+            <image class='uploadimg' src='{{item.path}}' data-presrc="{{item.path}}" bindtap='previewImg' mode='aspectFill'></image>
+            <cover-view class='progress' wx:if="{{upFilesProgress}}">
+                {{item.progress}}%
+            </cover-view>
+            <cover-view class='delbtn' data-index="{{index}}" data-type="image" bindtap='delFile'>X</cover-view>
+        </view>
+        <view class='uploadimgbox' wx:for="{{upVideoArr}}" wx:key="item">
+            <video class='uploadimg' src="{{item.tempFilePath}}"  controls ></video>
+          <cover-view class='progress' wx:if="{{upFilesProgress}}">
+                {{item.progress}}%
+            </cover-view>
+            <cover-view class='delbtn' data-index="{{index}}" data-type="video" bindtap='delFile'>X</cover-view>
+        </view>
+        
+        <view class='uploadimgbox' wx:if="{{upFilesBtn}}">
+            <image class='uploadbtn' bindtap='uploadFiles' src='../../images/addimgsbtn.png'></image>
+        </view>
+        
+    </view>
+    <view class="page__bd page__bd_spacing">
+          <button class="ljfb" formType="submit">立即发布</button>
+    </view>
+    
+    </form>
+</view>
+<view class="page__bd page__bd_spacing">
+          <button bindtap='toIndex'>立即发布</button>
+    </view>
+<wux-select id="wux-select2" />

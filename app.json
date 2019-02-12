@@ -1,0 +1,64 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/my/my",
+    "pages/me/me",
+    "pages/myBlog/index",
+    "pages/publish/index",
+    "pages/blog/index",
+    "pages/levelMsg/index",
+    "pages/project/project",
+    "pages/my-collect/my-collect",
+    "pages/forumDetail/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/flow/index",
+    "pages/search/index",
+    "pages/index-more/index-more",
+    "pages/flow/detail",
+    "pages/express/index",
+    "pages/weather/index",
+    "pages/map/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fd4a5f",
+    "navigationBarTitleText": "豆宝网",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#fd4a5f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/blog/index",
+        "text": "美文",
+        "iconPath": "images/tabIcon1.png",
+        "selectedIconPath": "images/tabIcon1_on.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "专题",
+        "iconPath": "images/tabIcon2.png",
+        "selectedIconPath": "images/tabIcon2_on.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabIcon3.png",
+        "selectedIconPath": "images/tabIcon3_on.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "debug": false
+}

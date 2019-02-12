@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "快递查询",
+  "usingComponents": {
+    "van-tag": "../../dist/tag/index",
+    "van-icon": "../../dist/icon/index",
+    "van-search": "../../dist/search/index",
+    "van-steps": "../../dist/steps/index",
+    "van-action-sheet": "../../dist/action-sheet/index",
+    "van-button": "../../dist/button/index",
+    "van-tree-select": "../../dist/tree-select/index"
+  }
+}

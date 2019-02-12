@@ -1,0 +1,59 @@
+<!-- <include src="../index/components/search/search.wxml" />  -->
+<view class="container m-b5 ttp">
+  <!-- <view class="user-header p-r">
+    <view class="user-bg-box">
+      <image class="header-bg" src="{{userInfo.info.userface}}"></image>
+    </view>
+  </view> -->
+  <view>
+  <view class="user-order">
+      <view class="user-order-cont dis-flex">
+      <view class="flex-box p-r header-img" style=" flex:1.4;">
+             <view><image class="hd" src="{{userInfo.info.userface}}"></image></view> 
+             <text class="user-admin onelist-hidden">{{userInfo.info.nickname}}</text> 
+        </view>
+        <navigator url="../../pages/publish/index" hover-class="navigator-hover">
+        <view class="flex-box p-r ttop">
+            <text class="iconfont icon-dianping orderListIcon"></text>
+            <text class="listCont">去发布</text>
+        </view>
+        </navigator>
+        <view class="flex-box p-r ttop">
+            <text class="iconfont icon-huo orderListIcon"></text>
+            <text class="listCont">已发布</text>
+            <text class="user-tag p-a" wx:if="{{userInfo.fcount > 0}}">{{userInfo.fcount}}</text>
+        </view>
+        <view class="flex-box p-r ttop">
+          <text class="iconfont icon-daipingjia orderListIcon "></text>
+          <text class="listCont">已获赞</text>
+          <text class="user-tag p-a" wx:if="{{userInfo.zancount > 0}}">{{userInfo.zancount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+<wux-tabs controlled scroll current="{{ current }}" bindchange="onChange">
+        <wux-tab key="tab0" title="全部" ontap="showOne" data-catid="0">
+        
+        </wux-tab>
+        <block wx:for="{{cates}}" wx:key="index" wx:for-item="rose">
+              <wux-tab key="tab{{rose.id}}" ontap="showOne" data-catid="{{rose.id}}" data-num="{{rose.catenum}}" data-catename="{{rose.defectsname}}">
+                  <view wx:if="{{rose.catenum>0}}"><wux-badge count="{{rose.catenum}}">{{rose.defectsname}}</wux-badge></view>
+                  <view wx:else>{{rose.defectsname}}</view>
+              </wux-tab>
+        </block>
+    </wux-tabs>
+      </view>
+    <view class="content cont">
+        <view class="warp">
+          <include src="../index/components/forum/forum6.wxml" />
+      </view>
+    </view>
+
+  <i-load-more class="{{showLoad?'view_show':'view_hide'}}" />
+  <i-load-more tip="我是有底线的!" class="{{showAll?'view_show':'view_hide'}}" loading="{{ false }}"/>
+  <!-- 返回顶部 -->
+  <view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+    <text class="iconfont icon-fanhuidingbu"></text>
+  </view>
+
+

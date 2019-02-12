@@ -1,0 +1,53 @@
+
+<view class="Rose-news" wx:for="{{forumList}}" wx:key="index" data-id="{{item.forum_id}}" data-catid="{{item.pid}}"> 
+  <view class="Rose-content">
+    <!-- <view class="Rose-flex">
+      <van-tag type="danger">{{item.defectsname}}</van-tag>
+    </view> -->
+    <navigator url="../../pages/forumDetail/index?id={{item.forum_id}}" hover-class="navigator-hover">
+        <view class="Rose-flex1 Rose-left">
+          <image class="Rose-user" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
+          <view class="Rose-nick">{{userInfo.nickName}} \n {{item.cdate}}</view>
+        </view>  
+        <view class="Rose-flex1 Rose-title">{{item.com}}</view>    
+        <view class="Rose-flex1 Rose-title hftitle"><text class="huifu">@{{item.nickname}}</text>  {{item.title}}</view>
+        <view wx:if="{{item.imgList}}">
+      <van-row gutter="10" >
+          <view wx:for="{{item.imgList}}" wx:key="index" wx:for-item="inn">
+              <van-col span="8" custom-class="imagee">
+                  <image class="Rose-imgitem" mode="aspectFill" lazy-load="{{true}}" src="{{inn==''? '/assets/images/ncode.jpg': inn}}"></image>
+              </van-col>
+          </view>
+      </van-row>
+      </view>
+      <view wx:else class="vio">
+        <image class="Rose-imgitem" mode="aspectFill" lazy-load="{{true}}" src="{{item.video==''? '/assets/images/ncode.jpg': item.video}}"></image>
+        <van-icon class="Rose-icon play"custom-class="icon" name="play" size="80rpx" />
+      </view>
+        <view class="Rose-detail">{{item.description}}</view>
+    </navigator>
+
+    <view class="Rose-bottom">    
+      <view class="Rose-flex1 Rose-left">
+        <van-icon class="Rose-icon" custom-class="icon" name="password-view" size="24rpx" />
+        <view class="Rose-nick1">{{item.views}}</view>
+      </view>
+      <view class="Rose-flex1 Rose-left">
+        <van-icon class="Rose-icon"custom-class="icon" name="chat" size="24rpx" />
+        <view class="Rose-nick1">{{item.reps}}</view>
+      </view>
+       <view class="Rose-flex1 Rose-left">
+        <van-icon class="Rose-icon {{ item.like?'active':''}}" bindtap="wetherLike" data-fid="{{item.forum_id}}" data-like="{{item.like}}"data-index="{{index}}" custom-class="icon" name="{{ item.like?'like':'like-o'}}" size="24rpx" />
+        <view class="Rose-nick1">{{item.zan}}</view>
+      </view>
+      <view class="Rose-flex1 Rose-left">
+        <icon class="coll iconfont {{ item.isCollect?'icon-shoucang1 active':'icon-shoucang'}} " bindtap="wetherCollect" data-fid="{{item.forum_id}}" data-like="{{item.isCollect}}"data-index="{{index}}" ></icon>
+      </view>
+      <view class="Rose-date Rose-flex1 Rose-right">
+        <van-icon class="Rose-icon"custom-class="icon" name="clock" size="24rpx" /> 
+        <view class="Rose-nick1">{{item.date}}</view>
+      </view>
+      
+    </view>
+  </view>
+</view>

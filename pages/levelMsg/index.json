@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "留言",
+  "usingComponents": {
+    "van-tag": "../../dist/tag/index",
+    "van-icon": "../../dist/icon/index",
+    "i-load-more": "../../dist/load-more/index",
+    "backtop": "../index/components/backtop/backtop",
+    "share": "../index/components/share/share"
+  }
+}

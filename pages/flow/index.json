@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "相册",
+  "usingComponents": {
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-icon": "../../dist/icon/index"
+  }
+}   

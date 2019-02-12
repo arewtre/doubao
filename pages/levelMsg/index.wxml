@@ -1,0 +1,68 @@
+<view class="content">
+    <!-- 留言列表 -->
+    <view class="Rose-comments">
+      <view class="Rose-lines">精选留言
+        <text class="Rose-small">(点击内容回复)</text>
+        <text class="Rose-small">(共{{comments.length}}条)</text>
+      </view>
+      <view class="Rose-lists" wx:if="{{comments.length!=0}}">
+        <view class="Rose-items" wx:for="{{comments}}" wx:key="index" wx:for-item="comment">
+          <view class="Rose-resource">
+            <image class="Rose-image" src="{{comment.userface}}"></image>
+            <view class="Rose-user">
+              <view class="Rose-form">
+                <view class="Rose-names">{{comment.nickname}}</view>
+                <view class="Rose-times">{{comment.date}}</view>
+                <view class="Rose-comment-content" data-id="{{comment.msgid}}" data-pid="" data-from="{{comment.nickname}}" bindtap="backContent">{{comment.content}}</view>
+              </view>
+              <view class="Rose-back" wx:if="{{comment.children.length}}">
+                <view class="Rose-back-item" wx:for="{{comment.children}}" wx:for-index="ii" wx:for-item="child" wx:key="ii" data-id="{{comment.msgid}}" data-pid="{{child.repid}}" data-from="{{child.nickname}}" bindtap="backContent">
+                  <text class="Rose-tt">{{child.nickname}}</text> 回复
+                  <text class="Rose-tt">
+                  <block wx:if="{{child.rep_id >0}}">{{child.reply_name}}</block>
+
+                  <block wx:else>{{comment.nickname}}</block>
+                  
+                  </text>： {{child.content}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="Rose-empty" wx:if="{{comments.length==0}}">
+        <icon class="iconfont icon-kafei"></icon>
+        留言还是空的，快来说两句吧~
+      </view>
+      <view class="Rose-end" wx:if="{{comments.length!=0 && !loadMore}}">
+        <text class="Rose-word">没有更多留言了~</text>
+      </view>
+    </view>
+
+<!-- 发表评论 -->
+<form bindsubmit="submit" report-submit='true'>
+<view class="Rose-fixed">
+  <div class="Rose-flex">
+    <view class="Rose-none text-left" bindtap="goHome">
+      <icon class="iconfont icon-shouye"></icon>
+    </view>    
+      <input class="Rose-input" type="text" value="{{content}}" bindinput="forContent" maxlength="-1" placeholder="{{placeholder}}" cursor-spacing="200" confirm-type="评论"/>
+      <button class="Rose-none Rose-post" disabled="{{disabled}}" wx:if="{{canIUse}}"  form-type="submit">留言</button>
+    
+  </div>
+</view>
+</form>
+
+<!-- 版权 -->
+<view class="Rose-copyRight">
+  <view class="kapo-name">DOUBAO</view>
+  Copyright © 2016-2018 DOU. All Rights Reserved.
+</view>
+
+<i-load-more class="{{showLoad?'view_show':'view_hide'}}" />
+<i-load-more tip="我是有底线的!" class="{{showAll?'view_show':'view_hide'}}" loading="{{ false }}"/>
+<!-- 返回顶部 -->
+<view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+  <text class="iconfont icon-fanhuidingbu"></text>
+</view>
+  </view>

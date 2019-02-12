@@ -1,0 +1,34 @@
+<wux-tabs controlled scroll current="{{ current }}" bindchange="onChange" class="{{showCate?'view_cate':''}}" >
+    <wux-tab class="wux-tab" key="1" title="收藏" ontap="showOne" data-catname="收藏"></wux-tab>
+    <wux-tab class="wux-tab" key="2" title="评论" ontap="showOne" data-catname="评论"></wux-tab>
+    <wux-tab class="wux-tab" key="3" title="点赞" ontap="showOne" data-catname="点赞"></wux-tab>
+    <wux-tab class="wux-tab" key="4" title="历史" ontap="showOne" data-catname="历史"></wux-tab>        
+</wux-tabs>
+ <view class="fixed-cont-body">
+      <view wx:if="{{forumList.length!=0}}" class="content">
+              <view class="warp">
+                <view wx:if="{{current==2}}">
+                    <include src="../index/components/forum/forum4.wxml" />
+                </view>
+                <view wx:elif="{{current==4}}">
+                    <include src="../index/components/forum/forum5.wxml" />
+                </view>
+                <view wx:else>
+                    <include src="../index/components/forum/forum3.wxml" />
+                </view>
+            </view>
+      </view>
+      <view class="Rose-empty" wx:if="{{forumList.length==0}}">
+        <icon class="iconfont icon-kafei"></icon>
+        收藏还是空的，赶紧去收藏吧~
+      </view>
+
+  <i-load-more class="{{showLoad?'view_show':'view_hide'}}" />
+  <i-load-more tip="我是有底线的!" class="{{showAll?'view_show':'view_hide'}}" loading="{{ false }}"/>
+  <!-- 返回顶部 -->
+  <view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+    <text class="iconfont icon-fanhuidingbu"></text>
+  </view>
+
+</view>
+

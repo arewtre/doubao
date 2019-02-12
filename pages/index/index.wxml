@@ -1,0 +1,79 @@
+<view class="container">
+  <!-- <scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="position:absolute; top:0; left:0; right:0; bottom:0;"> -->
+    <!-- <include src="components/search/search.wxml" /> -->
+    <include src="components/banner/banner.wxml" />
+    <van-notice-bar
+      text="{{gonggao}}"
+      left-icon="//img.yzcdn.cn/public_files/2017/8/10/6af5b7168eed548100d9041f07b7c616.png"
+      mode="closeable"
+    />
+    <view class="Rose-lists">
+        <view class="Rose-floor-title Rose-lines" >新加入伙伴
+            <!-- <text class="Rose-go" bindtap="viewmore">查看更多</text> -->
+      </view>
+      <view class="Rose-box">
+        <scroll-view class="Rose-items" scroll-x="true">
+          <view class="Rose-itemss" wx:for="{{memberList}}" wx:key="index">
+          <!-- <navigator url="../../pages/forumDetail/index?id={{item.forum_id}}" hover-class="navigator-hover"> -->
+            <image class="Rose-imgbests" lazy-load="{{true}}" src="{{item.userface==''? '/assets/images/wx_04.jpg':item.userface }}"></image>
+              <view class="Rose-bottom2">
+                <view class="Rose-flex1 Rose-center">
+                  <view class="Rose-center Rose-nick2">{{item.nickname}}</view>
+                </view>
+              </view>
+              <!-- </navigator> -->
+          </view>
+        </scroll-view>
+      </view>
+</view>
+
+    <view class="Rose-lists">
+        <view class="Rose-floor-title Rose-lines" >精选
+            <text class="Rose-go" bindtap="viewmore">查看更多</text>
+      </view>
+      <view class="Rose-box" bindtap="viewmore">
+        <scroll-view class="Rose-items" scroll-x="true">
+          <view class="Rose-item" wx:for="{{forumTop}}" wx:key="index" data-id="{{top.id}}" data-catid="{{top.catid}}" ontap="articleDetail">
+          <navigator url="../../pages/forumDetail/index?id={{item.forum_id}}" hover-class="navigator-hover">
+            <image class="Rose-imgbest" lazy-load="{{true}}" src="{{item.video==''? '/assets/images/wx_04.jpg':item.video }}"></image>
+            <view class="Rose-title">{{ item.title }}</view>
+              <view class="Rose-bottom">
+                <view class="Rose-flex1 Rose-left1">
+                  <image class="Rose-user" mode="aspectFill" src="{{item.userface}}"></image>
+                  <view class="Rose-nick">{{item.nickname}}</view>
+                </view>
+                <view class="Rose-flex1 Rose-right">
+                  <!-- <van-icon class="Rose-icon"custom-class="icon" name="clock" size="24rpx" />  -->
+                  <view class="Rose-nick1">{{item.date}}</view>
+                </view>
+              </view>
+              </navigator>
+          </view>
+        </scroll-view>
+      </view>
+</view>
+    <view class="category-list">
+      <!--循环输出列表 begin-->
+      <view class="warp">
+          <include src="components/forum/forum2.wxml" /> 
+      </view>
+
+      <!--循环输出列表 end-->
+    </view>
+
+    
+
+    <!-- 底线 -->
+    <!-- <view class="title-footer p-r">
+      <text class="f-24 col-9 cont">我是有底线的</text>
+      <view class="hr"></view>
+    </view> -->
+  <!-- </scroll-view> -->
+ <i-load-more class="{{showLoad?'view_show':'view_hide'}}" />
+  <i-load-more tip="我是有底线的!" class="{{showAll?'view_show':'view_hide'}}" loading="{{ false }}"/>
+  <!-- 返回顶部 -->
+  <view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+    <text class="iconfont icon-fanhuidingbu"></text>
+  </view>
+
+</view>

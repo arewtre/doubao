@@ -1,0 +1,39 @@
+/* 搜索框组件 */
+@import "components/search/search.wxss";
+
+/* banner组件 */
+@import "components/banner/banner.wxss";
+
+/* forum组件 */
+@import "components/forum/forum.wxss";
+
+
+.Rose-lines, .wxParse-h3 {
+  font-size: 30rpx;
+  position: relative;
+  padding: 10rpx 20rpx;
+  color: #333;
+  background:#fff;
+}
+
+.Rose-lines:before, .wxParse-h3:before {
+  position: absolute;
+  top: 16rpx;
+  left: 0;
+  width: 8rpx;
+  height: 30rpx;
+  content: '';
+  background: #fd4a5f;
+}
+
+.wxParse-h3 {
+  margin: 40rpx 0 0;
+  font-weight: 400;
+}
+
+.wxParse-h3:before {
+  top: 24rpx;
+}
+
+
+

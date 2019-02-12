@@ -1,0 +1,13 @@
+
+<view wx:for="{{forumList}}" class="lists" wx:key='this'>
+  <navigator url="../../pages/forumDetail/index?id={{item.forum_id}}" hover-class="navigator-hover">
+      <view class="imgs"><image src="{{item.video}}" class="in-img" background-size="cover" model="scaleToFill"></image></view>
+      <view class="infos">
+        <view class="title">{{item.title}}</view>
+        <view class="bot">
+            <view class="cate"><van-tag type="danger">{{item.defectsname}}</van-tag></view>
+            <view class="date"><van-icon class="clock" custom-class="icon" name="clock" size="14px" />{{item.date}}</view>
+        </view>
+      </view>
+    </navigator>
+</view>

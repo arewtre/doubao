@@ -1,0 +1,337 @@
+.warp{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+navigator { overflow: hidden;}
+
+.lists {margin-bottom: 20rpx;padding:20rpx;height: 200rpx;position: relative;background:#fff}
+.imgs {float: left;}
+.imgs image {display: block; width: 284rpx;height: 200rpx;border-radius:15rpx}
+
+.infos {float: left; width: 360rpx; height: 185rpx;padding: 10rpx 0 0 20rpx;position:relative}
+.title {font-size: 18px;}
+.date {font-size: 14px;color: #aaa; position: absolute;bottom: 0;right:0}
+.cate {font-size: 14px;color: #aaa; position: absolute;bottom: 0;left:20rpx}
+.bot{margin-top:20rpx}
+.loadMore {text-align: center;margin: 30px;color: #aaa;font-size: 16px}
+.clock{margin-top:2rpx;margin-right:8rpx}
+/* forum2 */
+.Rose-swiper {
+  height: 240rpx;
+  text-align: center;
+}
+.Rose-right {
+  text-align: right;
+  font-size:20rpx
+}
+.Rose-left {
+  text-align: left;
+  font-size:20rpx
+}
+.Rose-left1 {
+  text-align: left;
+  font-size:20rpx;
+  min-width:200rpx;
+}
+.Rose-center {
+  text-align: center;
+}
+.Rose-floor1 {
+  padding: 40rpx 40rpx 0;
+  background: #1d8f59;
+  color: #fff;
+  font-size: 26rpx;
+}
+.Rose-top-quote {
+  margin: 0 20rpx 20rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.Rose-lists {
+  overflow: hidden;
+  margin: 20rpx 0;
+  background: #fff;
+}
+.Rose-news {
+  overflow: hidden;
+  margin: 20rpx 0;
+  padding: 0 20rpx 0 20rpx;
+  background: #fff;
+}
+.Rose-floor-title {
+  padding: 18rpx 20rpx;
+  margin: 0 0 20rpx;
+  color: #666;
+  border-bottom: 2rpx solid #f2f2f2;
+  font-size: 32rpx;
+}
+.Rose-item {
+  display: inline-block;
+  margin: 0 20rpx 0 0;
+  width: 330rpx;
+  vertical-align: top;
+}
+.Rose-imgbest {
+  width: 100%;
+  height: 180rpx;
+}
+.Rose-itemss {
+  display: inline-block;
+  margin: 0 20rpx 0 0;
+  width: 140rpx;
+  vertical-align: top;
+}
+.Rose-imgbests {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:50% 50%;
+}
+.Rose-title {
+  display: -webkit-box;
+  padding: 0 0 10rpx;
+  font-size: 30rpx;
+  color: #333;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.Rose-lists .Rose-title {
+  padding: 10rpx 0;
+  height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.Rose-lists .Rose-time {
+  margin: 6rpx 0 0;
+}
+.Rose-lists .Rose-time .iconfont{
+ margin:-18rpx 5rpx 0 0;
+ vertical-align:text-top;
+ font-size:28rpx;
+}
+.Rose-imgitem {
+  flex: none;
+  width:100%;
+  height: 350rpx;
+}
+
+.Rose-imgitems {
+  /* flex: none; */
+  width:100%;
+  /* max-height: 240rpx; */
+}
+.Rose-content {
+  padding: 15rpx 0 5rpx 0;
+  color: #333;
+}
+.Rose-time {
+  font-size: 24rpx;
+  color: #999;
+}
+.Rose-detail {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 1.6;
+  text-align: left;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+  color: #666;
+}
+.Rose-flex {
+  display: flex;
+  margin: 0 0 15rpx 0;
+  flex-direction: row;
+}
+.Rose-kind {
+  text-align: left;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: -18rpx;
+  font-weight: 600;
+}
+.Rose-bottom {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  margin:5rpx 0 0 0;
+}
+.Rose-bottom2 {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  margin:5rpx 0 0 0;
+  width:120rpx;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow:hidden;
+}
+.Rose-bottom .iconfont {
+  font-size: 26rpx;
+}
+.Rose-bottom  .iconfont.icon-kanguos {
+  font-size: 30rpx;
+}
+.Rose-bottom .iconfont.icon-xiangqu {
+  padding-left: 20rpx;
+}
+.Rose-flex1 {
+  flex: 1; 
+  min-height:40rpx;
+  line-height:40rpx
+}
+.Rose-box {
+  margin: 0 20rpx;
+}
+.Rose-items {
+  position: relative;
+  width: 100%;
+  margin: 10rpx 0;
+  white-space: nowrap;
+}
+
+.green {
+  padding-right: 8rpx;
+  color: #1d8f59;
+  font-size: 30rpx;
+}
+.Rose-go {
+  float: right;
+  color: #999;
+  font-size:28rpx;
+}
+.Rose-comment {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: -18rpx;
+}
+.Rose-menu {
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.Rose-kinds {
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  width: 90rpx;
+}
+.Rose-kinds .iconfont {
+  font-size: 42rpx;
+  display: block;
+}
+.view-circle {
+  border-radius: 100%;
+  color: #fff;
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0 auto 20rpx;
+}
+.color4 {
+  background-color: #8a90fa;
+}
+.color3 {
+  background-color: #4dc6ee;
+}
+.color2 {
+  background-color: #fed030;
+}
+.color1 {
+  background-color: #fd9d21;
+}
+.Rose-floor {
+  background: #fff;
+}
+.Rose-user{
+  width:36rpx;
+  height:36rpx;
+  border-radius:50% 50%;
+  float:left;
+}
+.Rose-nick{
+  font-size:20rpx;
+  float:left;
+  margin-left:10rpx;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow:hidden;
+  max-width:150rpx
+}
+.Rose-nick1{
+  font-size:20rpx;
+  float:left;
+  margin-left:10rpx;
+  
+}
+.Rose-nick2{
+  font-size:20rpx; 
+}
+.Rose-icon{
+  float:left;
+  margin-left:10rpx;
+  margin-top:5rpx
+}
+.van-tag{
+  margin-top:10rpx
+}
+
+.coll{
+  margin-top:-8rpx;
+  font-size:28rpx !important;
+}
+.Rose-date{
+  min-width:160rpx;
+}
+.Rose-title .huifu{
+  color:#4dc6ee;
+}
+.hftitle{
+  border-top:1rpx solid #f7f7f7f7;
+  border-left:1rpx solid #f7f7f7f7;
+  border-right:1rpx solid #f7f7f7f7;
+  padding:10rpx;
+}
+
+.ttu{
+    display: block;
+    margin: 0;
+    background: #fff;
+    border: solid 1px #eee;
+    border-radius: 3px;
+    height: 350rpx;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.ttu image{
+    position: absolute !important;
+    top: 0!important;
+    left: 50% !important;
+    max-height: 100% !important;
+    max-width: none !important;
+    transform: translate(-50%) !important;
+}
+
+.play{
+  position:absolute;
+  left:295rpx;
+  top:145rpx;
+  z-index:999;
+  color:white;
+  font-weight:600
+}
+.vio{
+  position:relative;
+  background: #000000;
+}
+

@@ -1,0 +1,46 @@
+/* pages/express/index.wxss */
+.contains{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-bottom: 20px
+}
+.title{
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+.ppicker{
+  font-size: 16px;line-height: 2;text-indent: 2em;margin-top: 20px
+}
+.inpicker{
+  float: left
+}
+.itemView{
+  float: left
+}
+.asd{
+  margin-top: 20rpx
+}
+.input{
+  float: left;
+}
+.input2{
+  float: left;
+  height:30rpx;
+  line-height:30rpx;
+  margin-left:20rpx;
+}
+.gs{
+  float:left;
+  text-align:left;
+}
+.btn{
+  margin-top: 30rpx;
+}
+.about-img{ display: block;margin: 20px auto 0;}
+.in-img{width: 124px;height: 110px}
+.loginBtn{background:#fd4a5f;color:#fff}
+.getScanCode{background:#fd4a5f;color:#fff;float:left}

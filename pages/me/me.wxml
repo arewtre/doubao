@@ -1,0 +1,42 @@
+<!--pages/me/me.wxml-->
+<view class="Rose-detail">
+  <view class="Rose-title">Eric Lin</view>
+  <view class="Rose-content">
+    <view class="Rose-item">
+      <view class="Rose-line">个人简介：</view>
+      南京码农一枚,工资勉强过活。不宅, 喜欢旅游,热爱生活, 内心阳光,喜欢和朋友一起happy，略微文艺，爱折腾, 不拖延！
+    </view>
+    <view class="Rose-item">
+      <view class="Rose-line">关于Dou：</view>
+      <view class="Rose-content">
+        为什么做这个小程序？自然是为了装逼,逢人就拿出来炫耀一番。 为什么叫"DOU", 因为"DOU"即本人宝贝闺女"豆豆宝"的"dou, 想用图文/视频的方式记录豆豆宝的成长点滴, 以及时不时转载一些育儿心得,希望大家一起探讨, 监督自己每天前进一小步。
+      </view>
+    </view>
+    <view class="Rose-item">
+      <view class="Rose-line">基本信息：</view>
+      <view class="Rose-content">
+        工作积极，和同事相处愉快，敢于承担责任，生活态度积极乐观，不易受外界干扰，喜欢有计划的安排生活和工作。创造属于自己的价值。 陪老婆去逛街，骑行，带娃，无所不会，无所不能。
+      </view>
+    </view>
+    <view class="Rose-item">
+      <view class="Rose-line">博客地址：</view>
+      http://linxinran.cn (域名具有特殊含义，无论好坏，个人喜欢)。
+    </view>
+    <view class="Rose-item">
+      <view class="Rose-line">关注我:</view>
+      <text class="Rose-concact">摇一摇,添加博主为好友吧</text>
+    </view>
+    <view class="Rose-item">
+      <view class="Rose-line">联系我：</view>
+      <text class="Rose-concact">QQ: 2505451091 </text>
+      <text class="Rose-concact">Wechat: LQAWY0918</text>
+      <text class="Rose-concact">Github: https://github.com/arewtre</text>
+    </view>
+  </view>
+</view>
+
+<!-- 版权 -->
+<view class="Rose-copyRight">
+  <view class="kapo-name">DOUBAO</view>
+  Copyright © 2016-2018 DOU. All Rights Reserved.
+</view>

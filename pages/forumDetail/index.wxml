@@ -1,0 +1,107 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="Rose-box">
+  <view class="Rose-detail">
+    <view class="Rose-title">{{detail.title}}</view>
+    <view class="Rose-addtime">
+      <image src="{{detail.userface}}" class="Rose-userface"></image> {{detail.nickname}}
+      
+      <text class="Rose-date" >{{detail.date}}</text>
+      <block wx:if="{{detail.keywords}}">
+          <text class="Rose-keywords" >关键字: {{detail.keywords}}</text>
+      </block>
+    </view>
+    <view class="Rose-content">    
+        <template is="wxParse" data="{{wxParseData:contents.nodes}}"/>
+    </view>
+    <view class="Rose-End">— End —</view>
+    <view class="Rose-read">阅读 {{detail.views}}
+      <view class="Rose-Right" bindtap="wetherLike">
+        <icon class="iconfont {{ like?'icon-like-fill':'icon-like'}}"></icon>
+        {{likenum}}
+      </view>
+    </view>
+    <view class="Rose-link">
+      {{items.url}}
+    </view>
+  </view>
+  <!-- 推荐阅读 -->
+  <view class="Rose-top" wx:if="{{top10.length >0 }}">
+    <view class="Rose-lines">推荐阅读</view>
+    <view class="Rose-topli" wx:for="{{top10}}" wx:key="index" wx:for-item="top" data-id="{{top.id}}" data-catid="{{top.catid}}" ontap="articleDetail">{{top.title}}</view>
+  </view>
+  <!-- 评论列表 -->
+  <view class="Rose-comments">
+    <view class="Rose-lines">精选评论
+      <text class="Rose-small">(点击内容回复)</text>
+      <text class="Rose-small">(共{{comments.length}}条)</text>
+    </view>
+    <view class="Rose-lists" wx:if="{{comments.length!=0}}">
+      <view class="Rose-items" wx:for="{{comments}}" wx:key="index" wx:for-item="comment">
+        <view class="Rose-resource">
+          <image class="Rose-image" src="{{comment.userface}}"></image>
+          <view class="Rose-user">
+            <view class="Rose-form">
+              <view class="Rose-names">{{comment.nickname}}</view>
+              <view class="Rose-times">{{comment.date}}</view>
+              <view class="Rose-comment-content" data-id="{{comment.comid}}" data-pid="" data-from="{{comment.nickname}}" bindtap="backContent">{{comment.content}}</view>
+            </view>
+            <view class="Rose-back" wx:if="{{comment.children.length}}">
+              <view class="Rose-back-item" wx:for="{{comment.children}}" wx:for-index="ii" wx:for-item="child" wx:key="ii" data-id="{{comment.comid}}" data-pid="{{child.repid}}" data-from="{{child.nickname}}" bindtap="backContent">
+                <text class="Rose-tt">{{child.nickname}}</text> 回复
+                <text class="Rose-tt">
+                <block wx:if="{{child.rep_id >0}}">{{child.reply_name}}</block>
+
+                <block wx:else>{{comment.nickname}}</block>
+                
+                </text>： {{child.content}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Rose-empty" wx:if="{{comments.length==0}}">
+      <icon class="iconfont icon-kafei"></icon>
+      评论还是空的，快来说两句吧~
+    </view>
+    <view class="Rose-end" wx:if="{{comments.length!=0 && !loadMore}}">
+      <text class="Rose-word">没有更多评论了~</text>
+    </view>
+    <!-- <loading load-more="{{loadMore}}"></loading> -->
+  </view>
+</view>
+<!-- 发表评论 -->
+<form bindsubmit="submit" report-submit='true'>
+<view class="Rose-fixed">
+  <div class="Rose-flex">
+    <view class="Rose-none text-left" bindtap="goHome">
+      <icon class="iconfont icon-shouye"></icon>
+    </view>
+    <view class="Rose-none text-left" bindtap="rewardRose">
+      <icon class="iconfont icon-fenxiang"></icon>
+    </view>
+    <view class="Rose-none text-left" bindtap="wetherCollect">
+      <icon class="iconfont {{ isCollect?'icon-shoucang1':'icon-shoucang'}}"></icon>
+    </view>
+      <input class="Rose-input" type="text" value="{{content}}" bindinput="forContent" maxlength="-1" placeholder="{{placeholder}}" cursor-spacing="200" confirm-type="评论"/>
+      <button class="Rose-none Rose-post" disabled="{{disabled}}" wx:if="{{canIUse}}"  form-type="submit">评论</button>
+    
+  </div>
+</view>
+</form>
+<!-- 打赏组件 -->
+<share show="{{show}}" bindcancel="modalCancel" bindconfirm='modalConfirm' catchtouchmove="true">
+  <view class='modal-content'>您的分享与关注是对我最大的奖赏！</view>
+</share>
+<!-- 版权 -->
+<view class="Rose-copyRight">
+  <view class="kapo-name">DOUBAO</view>
+  Copyright © 2016-2018 DOU. All Rights Reserved.
+</view>
+<!-- 返回顶部 -->
+<backtop back-show="{{backShow}}"></backtop>
+<!-- 返回顶部 -->
+<view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+  <text class="iconfont icon-fanhuidingbu"></text>
+</view>

@@ -1,0 +1,33 @@
+/* pages/detail/detail.wxss */
+.img_item{
+    width: 48%; 
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.img_item image{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 1px #cccccc;
+   
+    
+    position: relative;
+}
+
+.iconfont.icon-kafei {
+      display:block;
+      font-size:90rpx;
+      color:#eee;
+      margin-bottom:10rpx;
+
+}
+
+.Rose-empty {
+padding:60rpx 0 80rpx;
+text-align:center;
+font-size:14px;
+color:#999;
+
+}

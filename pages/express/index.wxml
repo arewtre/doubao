@@ -1,0 +1,39 @@
+<!-- 
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入物流单号"
+    use-action-slot
+    bind:change="onChange"
+    bind:search="onSearch"
+    show-action="true"
+  >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search> -->
+<view class="contains">
+  <view class="ppicker">
+    <picker bindchange="bindPickerChange" value="{{areaIndex}}" range="{{area}}">
+      <view class="inpicker">快递公司：</view>
+      <view class="gs">{{area[areaIndex]}}</view>
+      <view style="clear:both"></view>
+    </picker>
+   <view class="asd">
+     <view  class="input">快递单号：</view>
+     <input  class="input2" placeholder="请输入单号" bindinput="passWdInput"  value="{{expCode}}"/>
+     <view  class="input sm" bindtap="getScanCode">扫码</view>
+   </view>
+ </view>
+
+<view class="btn">
+  <button class="loginBtn" bindtap="onSearch">点击查询</button>
+     
+</view>
+</view>
+
+
+  <van-steps
+    steps="{{ express }}"
+    active="{{ active }}"
+    direction="vertical"
+    active-color="#f44"
+  />
+

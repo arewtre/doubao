@@ -1,0 +1,265 @@
+/* iconfont */
+@import "asset/iconfont.wxss";
+@import "utils/iconfont.wxss";
+.container, input {
+  font-family: PingFang-Medium,
+                 PingFangSC-Regular,
+                 Heiti,
+                 Heiti SC,
+                 DroidSans,
+                 DroidSansFallback,
+                 "Microsoft YaHei",
+                 sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+page {
+  background: #f7f7f7f7;
+}
+
+.search-input-box {
+  height: 64rpx;
+  /* overflow: hidden; */
+}
+
+.search-input {
+  width: 80%;
+  background: #fff;
+  border-radius: 5px 0 0 5px;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.search-input input {
+  font-size: 30rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.serch-button {
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.serch-button button {
+  line-height: 64rpx;
+  height: 64rpx;
+  font-size: 28rpx;
+  border-radius: 0 5px 5px 0;
+}
+
+.banner-box {
+  height: 421.875rpx;
+  box-shadow:10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.linear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.4rem;
+  background: linear-gradient(#111, transparent);
+  opacity: 0.6;
+  z-index: 9;
+}
+
+.index-banner {
+  position: relative;
+}
+
+.index-search-box {
+  /* padding: 18rpx 0 12rpx 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4999;
+  box-sizing: border-box; */
+}
+
+.index-search {
+  width: 90%;
+  border-bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 80rpx;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  line-height: 55rpx;
+}
+
+.index-search .cont .icon-sousuo {
+  margin-right: 10rpx;
+}
+
+.wxParse-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom:20rpx
+}
+
+.wxParse-inline {
+  font-size: 28rpx;
+  text-align: left;
+  line-height:56rpx
+}
+
+.wxParse-div {
+  overflow: hidden;
+}
+
+.wxParse-div .kd_pic {
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.xEmojiView {
+  margin: 15rpx 0;
+}
+.clear{
+  clear:both;
+}
+view, text {
+  font-family:"PingFang SC", "Heiti SC", "SF UI Text", "Helvetica Neue", "Roboto", "Droid Sans Fallback", "arial", "sans-serif";
+  font-size:28rpx;
+  /* color:#333; */
+
+}
+.fixed-page {
+  position:relative;
+  background-color:#fff;
+  z-index:1;
+
+}
+.fixed-cont-body {
+  padding-bottom:116rpx;
+
+}
+
+/*  作者信息  */
+.author-info{
+    position:relative;
+    height: 340rpx;
+    background-image: url(http://fb.mylove920.com/iconfont/banner2.png);
+    font-size:28rpx;
+}
+.author-info text{
+    color:#fff;
+}
+.author-detail{
+    padding: 60rpx 0 20rpx;
+    text-align:center;
+}
+.author-detail image{
+    display:block;
+    width: 100rpx;
+    height:100rpx;
+    margin:0 auto 10rpx;
+    border-radius:50%;
+}
+
+.effects{
+    overflow:hidden;
+}
+    .effects-item{
+        box-sizing: border-box;
+        width:25%;
+        float:left;
+        border-right:1rpx solid #666;
+        text-align:center;
+    }
+    .effects-item:last-child{
+        border:0;
+    }
+    .effects-item .number{
+        display:block;
+        font-weight:bold;
+        font-size:30rpx;
+        color:#fff;
+    }
+    .effects-item text{
+        color:#666;
+    }
+.view_show{
+  display:block;
+}
+.view_hide{
+  display:none;
+}
+
+.widget-goTop {
+  position: fixed;
+  bottom: 150rpx;
+  z-index: 20;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 76rpx;
+  height: 76rpx;
+  border-radius: 76rpx;
+  border: 1rpx solid #eee;
+}
+
+.widget-goTop .icon-fanhuidingbu {
+  color: #666;
+  display: block;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 32rpx;
+}
+.active{
+  color:#fd4a5f;
+}
+
+.Rose-copyRight {
+  padding:40rpx;
+  text-align:center;
+  font-size:20rpx;
+  color:#ccc;
+  line-height:1.4;
+
+}
+.kapo-name {
+  font-size:24rpx;
+  color:#a8a8a8;
+
+}
+
+
+.imagee {
+  width:240rpx;
+  height:135rpx;
+  text-align: center;
+  margin-bottom: 10px;
+  background-clip: content-box;
+}
+
+.imagee image{
+  width:100%;
+  height:100%;
+}
+
+.Rose-bottom .Rose-right {
+    min-width:160rpx;
+    text-align:right;
+}
+
+.view_cate{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+}
+
+
